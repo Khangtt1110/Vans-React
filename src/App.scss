@@ -31,6 +31,17 @@ body {
     @include mobile {
         margin-bottom: 3rem;
     }
+
+    .ui.menu.fixed {
+        // width: max-content;
+        left: auto;
+        right: auto;
+        top: 0;
+    }
+
+    a {
+        color: $black;
+    }
 }
 
 @media (hover: hover) {

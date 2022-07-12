@@ -1,0 +1,13 @@
+@use '../scss/' as *;
+
+.detail {
+    br {
+        display: none;
+    }
+}
+
+.active {
+    a {
+        color: $black !important;
+    }
+}
