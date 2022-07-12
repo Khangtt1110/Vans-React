@@ -39,8 +39,20 @@ body {
         top: 0;
     }
 
+    .ui.button {
+        border-radius: 0;
+    }
+
     a {
         color: $black;
+    }
+
+    .breadcrumbActive {
+        a {
+            color: $black !important;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
     }
 }
 

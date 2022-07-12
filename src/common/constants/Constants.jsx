@@ -55,6 +55,7 @@ export const productsData = [
         image: images.card1,
         title: 'Mono Old <br /> Skool Shoes',
         price: '55.99',
+        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
         amount: 0,
     },
     {
@@ -62,6 +63,7 @@ export const productsData = [
         image: images.card2,
         title: 'Old <br /> Skool Shoes',
         price: '55.99',
+        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
         amount: 0,
     },
     {
@@ -69,6 +71,7 @@ export const productsData = [
         image: images.card3,
         title: 'Create Old Skool <br /> Reissue Dx Shoes',
         price: '55.99',
+        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
         amount: 0,
     },
     {
@@ -76,6 +79,7 @@ export const productsData = [
         image: images.card4,
         title: 'Varsity Suede <br /> Old Skool Shoes',
         price: '55.99',
+        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
         amount: 0,
     },
     {
@@ -83,6 +87,7 @@ export const productsData = [
         image: images.card5,
         title: 'SK9-HI <br /> MTE Shoes',
         price: '55.99',
+        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
         amount: 0,
     },
 ];

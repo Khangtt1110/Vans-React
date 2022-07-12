@@ -4,10 +4,27 @@
     br {
         display: none;
     }
-}
 
-.active {
-    a {
-        color: $black !important;
+    &-info > * ~ * {
+        margin: 0.2rem 0 !important;
+    }
+
+    &-price {
+        color: red;
+        font-size: 1.2rem;
+    }
+
+    &-button {
+        padding: 1.2rem 3rem !important;
+        margin-top: 3rem !important;
+    }
+
+    &-description {
+        font-size: 1.1rem;
+        padding: 1rem 0;
+    }
+
+    &-image {
+        width: 100%;
     }
 }

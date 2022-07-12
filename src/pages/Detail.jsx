@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-import { Breadcrumb, Container, Grid, Header, Image, Label, Rating } from 'semantic-ui-react';
-
+import { Button, Container, Grid, Header, HeaderContent, Image, Rating } from 'semantic-ui-react';
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { productsData } from '~/common/constants/Constants';
+import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
 
 import './Detail.scss'
 
@@ -17,6 +18,9 @@ const Detail = () => {
         setData(productsData?.find(({ id }) => String(id) === params.productId));
     }, []);
 
+    /**
+     * sections data
+     */
     const sections = [
         {
             key: 'Home',
@@ -38,45 +42,52 @@ const Detail = () => {
         },
     ]
 
-    console.log(data);
     return (
         <Container className='detail'>
-            <Grid>
-                {/* Breadcrumb */}
-                <Grid.Row>
-                    <Breadcrumb size='large'>
-                        {sections.map((item, index) => (
-                            <>
-                                <Breadcrumb.Section key={index} className={item.active && 'active'} link>
-                                    <Link to={`${item.path}`}><div dangerouslySetInnerHTML={{ __html: item?.content }}></div></Link>
-                                </Breadcrumb.Section>
-                                {item.link && (<Breadcrumb.Divider icon={'right angle'} />)}
-                            </>
-                        ))}
-                    </Breadcrumb>
-                </Grid.Row>
+            {/* Breadcrumb */}
+            <Grid.Row>
+                <Breadcrumbs data={sections} />
+            </Grid.Row>
 
-                {/* Detail */}
-                <Grid.Row>
-                    <Grid.Column computer={6} >
-                        <Image src={data?.image} size='massive' />
-                    </Grid.Column>
+            {/* Detail */}
+            <Grid padded='vertically' container >
+                {/* Image product detail */}
+                <Grid.Column computer={6} mobile={16}>
+                    <Image className='detail-image' src={data?.image} />
+                </Grid.Column>
+                {/* Product detail */}
+                <Grid.Column computer={10} mobile={16}>
+                    <Grid.Row className='detail-info'>
+                        <HeaderContent className='detail-price'>
+                            ${data?.price}
+                        </HeaderContent>
+                        <Header size='huge' className="detail-title">
+                            <div dangerouslySetInnerHTML={{ __html: data?.title }}></div>
+                        </Header>
+                        <Rating maxRating={5} defaultRating={3} icon={'heart'} size='large' />
+                    </Grid.Row>
 
-                    <Grid.Column computer={10}>
-                        <Grid.Row>
-                            <Header as={'h1'} textAlign='center'>
-                                <div className="title" dangerouslySetInnerHTML={{ __html: data?.title }}></div>
-                            </Header>
-                        </Grid.Row>
-                        <Grid.Row>
-                            <Rating maxRating={5} defaultRating={3} size='large' />
-                        </Grid.Row>
-                        <Grid.Row >
-                            <Label color='red' size='large'>${data?.price}</Label>
-                        </Grid.Row>
-                    </Grid.Column>
-                </Grid.Row>
+                    <Grid.Row>
+                        <Button color='youtube' className='detail-button'>ADD TO CART</Button>
+                        <Header as='h2'>Description</Header>
+                        <HeaderContent className='detail-description'>
+                            {data?.description}
+                        </HeaderContent>
+                    </Grid.Row>
+                </Grid.Column>
             </Grid>
+
+            <Swiper
+                grabCursor={true}
+                spaceBetween={0}
+                slidesPerView={3}
+            // autoplay={{ delay: 2000 }}
+            >
+                {/* Show all movie in state */}
+                <SwiperSlide >Slide 4</SwiperSlide>
+                <SwiperSlide >Slide 4</SwiperSlide>
+                <SwiperSlide >Slide 4</SwiperSlide>
+            </Swiper>
         </Container >
     )
 }
