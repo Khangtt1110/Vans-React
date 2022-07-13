@@ -45,11 +45,24 @@ body {
         -webkit-box-shadow: none;
         border: none;
     }
+    .ui.grid,
+    p {
+        margin: 0;
+    }
 
     .ui.menu.fixed {
         left: auto;
         right: auto;
         top: 0;
+    }
+    // reset padding grid
+    .ui.grid > .row,
+    .ui.grid > .row > .column {
+        padding: 0;
+    }
+    //reset box shadow icon
+    i.bordered.icon {
+        box-shadow: none;
     }
 
     // border none

@@ -63,7 +63,7 @@ export const productsData = [
         image: images.card2,
         title: 'Old <br /> Skool Shoes',
         price: '22.99',
-        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
+        description: 'First known as the Vans #36, the Old Skool debuted in 1977 with a unique new addition: a random doodle drawn by founder Paul Van Doren, and originally referred to as the “jazz stripe.” Today, the famous Vans Sidestripe has become the unmistakable—and instantly recognizable—hallmark of the Vans brand. Constructed with durable suede and canvas uppers in a range of fresh colorways, the Old Skool pays homage to our heritage while ensuring that this low top, lace-up shoe remains as iconic as ever. It also features re-enforced toe caps, supportive padded collars, and signature rubber waffle outsoles.',
         amount: 0,
     },
     {
@@ -71,7 +71,7 @@ export const productsData = [
         image: images.card3,
         title: 'Create Old Skool <br /> Reissue Dx Shoes',
         price: '33.99',
-        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
+        description: 'First introduced in 1977, the Vans #98-now known as the Classic Slip-On—instantly became an icon in Southern California. Fast forward to today, and the Classic Slip-On is known worldwide for its comfortable silhouette, easy wearability, and beloved design. Made with sturdy low profile canvas uppers, the Classic Slip-On is an everyday essential with true “Off The Wall” style. This iconic slip-on shoe also includes supportive padded collars, elastic side accents, and signature rubber waffle outsoles.',
         amount: 0,
     },
     {
@@ -79,7 +79,7 @@ export const productsData = [
         image: images.card4,
         title: 'Varsity Suede <br /> Old Skool Shoes',
         price: '44.99',
-        description: 'The Old Skool Stackform refreshes our iconic sidestripe silhouette with an even chunkier take on the platform aesthetic. Constructed with a 34 mm sidewall height, this platform shoe elevates a classic favorite while bringing a new “Off The Wall” style to your look. Along with traditional suede and canvas uppers, the Old Skool Stackform is finished with supportive padded collars and signature rubber waffle outsoles. Vans’ iconic sidestripe shoe Upgraded with a 34 mm platform height Sturdy suede and canvas uppers Lace-up closure Supportive padded collars Signature rubber waffle outsoles',
+        description: 'The Classic Slip-On features sturdy low profile slip-on canvas uppers, padded collars, elastic side accents, and signature rubber waffle outsoles',
         amount: 0,
     },
     {
