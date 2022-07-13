@@ -20,6 +20,9 @@
     }
 
     &-description {
+        text-transform: none;
+        word-spacing: 0.4rem;
+        line-height: 1.6rem;
         font-size: 1.1rem;
         padding: 1rem 0;
     }

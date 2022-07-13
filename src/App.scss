@@ -22,7 +22,8 @@ html {
 }
 
 body {
-    font-family: $font-family;
+    font-family: $font-family !important;
+    text-transform: uppercase;
     font-weight: 400;
     line-height: 1.5;
 
@@ -39,7 +40,10 @@ body {
         top: 0;
     }
 
-    .ui.button {
+    // border none
+    .ui.button,
+    .ui.input > input,
+    .ui.action.input:not([class*='left action']) > .button:last-child {
         border-radius: 0;
     }
 

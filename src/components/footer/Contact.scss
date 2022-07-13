@@ -1,0 +1,39 @@
+.contact {
+    color: white;
+
+    &-container {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+    }
+
+    &-description {
+        line-height: 1.7rem;
+        opacity: 0.5;
+    }
+
+    &-input {
+        margin-top: 20px;
+
+        input {
+            background: transparent !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-right: none !important;
+            color: white !important;
+        }
+
+        input::placeholder {
+            font-size: 0.8rem;
+            font-family: var(--font-family);
+            color: white !important;
+        }
+
+        button {
+            padding: 15px !important;
+        }
+    }
+}
+
+.margin-right {
+    margin-right: 1rem !important;
+}

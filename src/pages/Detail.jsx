@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { Button, Container, Grid, Header, HeaderContent, Image, Rating } from 'semantic-ui-react';
+import { Container, Grid, Header, HeaderContent, Image, Rating } from 'semantic-ui-react';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { productsData } from '~/common/constants/Constants';
 import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
+import Button from '~/components/button/Button';
 
 import './Detail.scss'
 
@@ -68,7 +69,7 @@ const Detail = () => {
                     </Grid.Row>
 
                     <Grid.Row>
-                        <Button color='youtube' className='detail-button'>ADD TO CART</Button>
+                        <Button>ADD TO CARD</Button>
                         <Header as='h2'>Description</Header>
                         <HeaderContent className='detail-description'>
                             {data?.description}
