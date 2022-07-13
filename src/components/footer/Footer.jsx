@@ -18,7 +18,7 @@ const Footer = () => {
           <Grid.Column computer={4} tablet={8} mobile={14}>
             <Contact data={socialData} />
           </Grid.Column>
-          <Grid.Column computer={4} tablet={8} mobile={14}>
+          <Grid.Column computer={4} tablet={8} mobile={16}>
             <Contact data={newsletterData} />
           </Grid.Column>
         </Grid>

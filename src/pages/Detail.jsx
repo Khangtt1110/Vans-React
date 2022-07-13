@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-import { Container, Grid, Header, HeaderContent, Image, Rating } from 'semantic-ui-react';
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Container, Grid, Header, HeaderContent, Image, Rating, Segment } from 'semantic-ui-react';
 import { productsData } from '~/common/constants/Constants';
+
 import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
 import Button from '~/components/button/Button';
+
+import Slider from "react-slick";
+import { settings } from '~/common/setting/setting';
 
 import './Detail.scss'
 
@@ -17,7 +20,7 @@ const Detail = () => {
      */
     useEffect(() => {
         setData(productsData?.find(({ id }) => String(id) === params.productId));
-    }, []);
+    }, [params]);
 
     /**
      * sections data
@@ -62,13 +65,13 @@ const Detail = () => {
                         <HeaderContent className='detail-price'>
                             ${data?.price}
                         </HeaderContent>
-                        <Header size='huge' className="detail-title">
+                        <Header as='h1' className="detail-title">
                             <div dangerouslySetInnerHTML={{ __html: data?.title }}></div>
                         </Header>
                         <Rating maxRating={5} defaultRating={3} icon={'heart'} size='large' />
                     </Grid.Row>
 
-                    <Grid.Row>
+                    <Grid.Row className='detail-content'>
                         <Button>ADD TO CARD</Button>
                         <Header as='h2'>Description</Header>
                         <HeaderContent className='detail-description'>
@@ -78,19 +81,43 @@ const Detail = () => {
                 </Grid.Column>
             </Grid>
 
-            <Swiper
-                grabCursor={true}
-                spaceBetween={0}
-                slidesPerView={3}
-            // autoplay={{ delay: 2000 }}
-            >
-                {/* Show all movie in state */}
-                <SwiperSlide >Slide 4</SwiperSlide>
-                <SwiperSlide >Slide 4</SwiperSlide>
-                <SwiperSlide >Slide 4</SwiperSlide>
-            </Swiper>
+            <div className='slider'>
+                <Header as='h3'>MAY WE SUGGEST</Header>
+                <Slider
+                    {...settings}>
+                    {productsData.map((item, i) => (
+                        <ProductList item={item} />
+                    ))}
+                </Slider>
+            </div>
         </Container >
     )
 }
+
+/**
+ * List all product
+ */
+const ProductList = props => {
+    const item = props.item
+    return (
+        <Segment >
+            <Link to={`/product/${item.id}`} replace={true}>
+                <div className='product-list'>
+                    <Image
+                        // label={{
+                        //     as: 'a',
+                        //     color: 'red',
+                        //     content: item?.price,
+                        //     ribbon: 'right',
+                        // }} 
+                        src={item?.image} className='product-list-image' />
+                    <div dangerouslySetInnerHTML={{ __html: item?.title }} className='product-list-title'></div>
+                </div>
+            </Link>
+        </Segment>
+    )
+}
+
+
 
 export default Detail

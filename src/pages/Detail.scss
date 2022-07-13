@@ -14,9 +14,12 @@
         font-size: 1.2rem;
     }
 
+    &-content {
+        margin-top: 5rem;
+    }
+
     &-button {
         padding: 1.2rem 3rem !important;
-        margin-top: 3rem !important;
     }
 
     &-description {
@@ -29,5 +32,35 @@
 
     &-image {
         width: 100%;
+    }
+}
+
+.slider {
+    margin-bottom: 3rem;
+
+    .product-list {
+        text-align: center;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        &-image {
+            margin-left: auto;
+            margin-right: auto;
+            height: 70%;
+            width: 70%;
+            @include mobile {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &-title {
+            display: block;
+            padding-bottom: 2rem;
+            @include mobile {
+                font-size: 0.7rem;
+            }
+        }
     }
 }
