@@ -6,14 +6,10 @@
     top: 0;
     left: 0;
     z-index: 100;
-    height: 6rem !important;
-
-    @include tablet {
-        height: 5rem;
-    }
+    height: $header-height !important;
 
     @include mobile {
-        height: 53px;
+        height: 53px !important;
         .ui.container {
             margin-left: 0 !important;
             margin-right: 0 !important;
@@ -30,7 +26,7 @@
     font-size: 1.1rem;
 
     &-logo {
-        max-height: 6rem;
+        max-height: $header-height;
         img {
             height: 100% !important;
         }
