@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { productsData } from '~/common/constants/Constants';
 
-const initialState = { productsData, total: 0 };
+const initialState = { productsData, total: 12 };
 
 export const counterSlice = createSlice({
     name: 'counter',

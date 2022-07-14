@@ -1,70 +1,77 @@
 @use '../../scss/' as *;
 
-.header-container {
-    background: $black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    height: $header-height !important;
-
-    @include mobile {
-        height: 53px !important;
-        .ui.container {
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-        }
-    }
-
-    & > div {
-        height: 100%;
+.header-active {
+    a {
+        color: $main-color !important;
     }
 }
 
-.header-menu {
-    font-weight: 300;
-    font-size: 1.1rem;
+.header-homepage-menu {
+    @include flex(center, center);
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
 
     &-logo {
-        max-height: $header-height;
-        img {
-            height: 100% !important;
-        }
+        height: 101% !important;
     }
 
     &-search {
         justify-content: left !important;
-        max-height: 6rem;
 
-        input {
-            color: white !important ;
-        }
+        input,
         input::placeholder {
             font-family: var(--font-family);
+            color: white !important;
         }
 
         & > div {
-            width: 100% !important;
             margin-left: 30px !important;
         }
     }
 
-    &-content {
-        justify-content: center;
-        max-height: 6rem;
-    }
-
-    &-card {
-        max-height: 6rem;
-        justify-content: center;
-        border-left: 1px solid gray;
-    }
-
     &-content,
+    &-content > a,
     &-search,
     &-card {
         color: white;
         display: flex !important;
         align-items: center;
     }
+
+    &-card {
+        border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+        justify-content: center;
+    }
+
+    &-label {
+        top: 0.8rem !important;
+        left: 5.8rem !important;
+
+        @include mobile {
+            top: 0.8rem !important;
+            left: 3.1rem !important;
+        }
+
+        @include tablet {
+            left: 4.1rem !important;
+        }
+    }
 }
+
+// @media screen and (min-width: 767px) and (max-width: 1024px) {
+//     .label-count {
+//         top: 10px !important;
+//         left: 37px !important;
+//     }
+// }
+
+// @media screen and (max-width: 767px) {
+//     .wrapper {
+//         height: 60px;
+//     }
+
+//     .label-count {
+//         top: 4px !important;
+//         left: 49px !important;
+//     }
+// }
