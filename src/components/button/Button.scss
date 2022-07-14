@@ -5,12 +5,22 @@ button {
 }
 
 .btn {
+    @include flex(center, center);
+    width: fit-content;
     border: 4px solid transparent;
     background-color: $main-color;
-    padding: 1rem 2rem;
+    font-family: $font-family;
+    padding: 1rem 2.8rem;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 500;
     color: $white;
+    letter-spacing: 0.1rem;
+
+    &-icon {
+        &::before {
+            margin-right: -2rem;
+        }
+    }
 }
 
 .btn:hover {

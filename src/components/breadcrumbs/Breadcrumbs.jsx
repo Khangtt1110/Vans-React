@@ -7,9 +7,9 @@ const Breadcrumbs = ({ data }) => {
         <Breadcrumb size='large'>
             {data.map((item, index) => (
                 <>
-                    <Breadcrumb.Section key={index} className={item.active && 'breadcrumbActive'} link>
+                    < Breadcrumb.Section className={item.active && 'breadcrumbActive'} link >
                         <Link to={`${item.path}`}><div dangerouslySetInnerHTML={{ __html: item?.content }}></div></Link>
-                    </Breadcrumb.Section>
+                    </Breadcrumb.Section >
                     {item.link && (<Breadcrumb.Divider icon={'right angle'} />)}
                 </>
             ))}

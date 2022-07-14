@@ -2,6 +2,42 @@
 
 .header-homepage {
     background: url('../../common/assets/VansBackground.jpg') no-repeat center;
-    height: 100vh;
+    height: 85vh;
     background-size: cover;
+
+    &-scroll {
+        @include flex(center !important, center);
+        flex-direction: column !important;
+
+        & > h4 {
+            margin-top: 1rem !important;
+        }
+    }
+}
+
+.header-list-content {
+    font-weight: 100 !important;
+    margin-top: 30px !important;
+    opacity: 0.8;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column !important;
+    margin: 10rem;
+
+    &-title {
+        font-size: 6rem !important;
+        text-transform: uppercase !important;
+        font-weight: 100 !important;
+        letter-spacing: 0.3rem;
+    }
+
+    &-content {
+        text-transform: uppercase !important;
+        letter-spacing: 0.1rem;
+        font-weight: 100 !important;
+        line-height: 1.9rem !important;
+        opacity: 0.8;
+    }
 }

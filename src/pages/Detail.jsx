@@ -86,7 +86,7 @@ const Detail = () => {
                 <Slider
                     {...settings}>
                     {productsData.map((item, i) => (
-                        <ProductList item={item} />
+                        <ProductList item={item} key={i} />
                     ))}
                 </Slider>
             </div>

@@ -9,7 +9,7 @@ import './Header.scss'
 
 
 
-const Header = ({ fixed = true }) => {
+const HeaderPage = ({ fixed = true }) => {
   const { pathname } = useLocation()
   const counter = useSelector((state) => state.counter.total);
   const headerRef = useRef()
@@ -38,7 +38,9 @@ const Header = ({ fixed = true }) => {
         <Grid>
           <Grid.Row className='header-homepage-menu'  >
             <Grid.Column computer={2} tablet={2} mobile={4}>
-              <Image src={images.logo} size="big" className='header-homepage-menu-logo' />
+              <Link to='/'>
+                <Image src={images.logo} size="big" className='header-homepage-menu-logo' />
+              </Link>
             </Grid.Column>
 
             {/* Search */}
@@ -84,4 +86,4 @@ const Header = ({ fixed = true }) => {
   )
 }
 
-export default Header
+export default HeaderPage
