@@ -98,6 +98,27 @@ body {
             width: 90% !important;
         }
     }
+
+    .ui.card {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .column {
+        margin: 0 !important;
+        border-radius: 0;
+        box-shadow: none;
+
+        .card {
+            border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+            }
+        }
+    }
 }
 
 @media (hover: hover) {

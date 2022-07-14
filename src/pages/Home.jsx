@@ -1,9 +1,10 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Button, Card, Divider, Grid, Header, Icon, Image, Label, Rating, Segment } from 'semantic-ui-react'
-import { FeaturedProductData, productsData } from '~/common/constants/Constants'
+import { Button, Card, Grid, Header, Icon, Image, Label, Rating, Segment } from 'semantic-ui-react'
+import { customCardData, FeaturedProductData, productsData } from '~/common/constants/Constants'
 import CustomCheckbox from '~/components/customCheckbox/CustomCheckbox'
+import Divider from '~/components/divide/Divider'
 import { increment } from '~/services/counter'
 import './Home.scss'
 
@@ -15,7 +16,7 @@ const Home = () => {
                     <Grid.Row className='home-feature'>
                         <FeatureProduct />
                     </Grid.Row>
-                    <Grid.Row>
+                    <Grid.Row className='home-card'>
                         <CardProduct data={productsData} />
                     </Grid.Row>
                 </Grid>
@@ -38,22 +39,22 @@ const FeatureProduct = () => {
         </Grid>
     );
 };
-
+// List all Product
 const CardProduct = ({ data, onHandleGetActive }) => {
     const dispatch = useDispatch();
     return (
         <>
             {data.map((item) => (
-                <Grid.Column key={item.id} computer={3} tablet={5} mobile={16} className={('wrapper')}>
-                    <Card link className={('container')}>
+                <Grid.Column key={item.id} computer={3} tablet={5} mobile={16} className={('card-product')}>
+                    <Card link className={('card-product-container')}>
                         {item.readMore ? (
                             <Card.Content>
-                                <Label attached="top left" size="large" className={('background-none')}>
+                                <Label attached="top left" size="large" className={('card-product-date')}>
                                     {item.date}
                                 </Label>
-                                <Label attached="top right" size="large" className={('background-none')}>
+                                <Label attached="top right" size="large" className={('card-product-date')}>
                                     <Rating
-                                        className={('like-number')}
+                                        className={('card-product-like')}
                                         icon="heart"
                                         onClick={(e) => onHandleGetActive({ id: item.id }, e)}
                                     />
@@ -61,13 +62,13 @@ const CardProduct = ({ data, onHandleGetActive }) => {
                                 </Label>
                             </Card.Content>
                         ) : (
-                            <Card.Content as="a" className={('card')}>
+                            <Card.Content as="a" className={('card-product-content')}>
                                 <Link to={`/product/${item.id}`}>
                                     <Icon name="eye" color="black" bordered />
                                 </Link>
                                 <Button
                                     color="youtube"
-                                    className={('card-btn')}
+                                    className={('card-product-content-btn')}
                                     onClick={() => dispatch(increment({ id: item.id }))}
                                 >
                                     <Icon name="shopping basket" />
@@ -75,9 +76,9 @@ const CardProduct = ({ data, onHandleGetActive }) => {
                             </Card.Content>
                         )}
 
-                        <Image src={item.image} className={item.readMore ? ('picture') : ('image')} />
+                        <Image src={item.image} className={item.readMore ? ('home-picture') : ('home-image')} />
                         <Card.Description textAlign="center">
-                            <Card.Header as="h5" dangerouslySetInnerHTML={{ __html: item.title }} />
+                            <Card.Header as="h4" dangerouslySetInnerHTML={{ __html: item.title }} />
                             <Divider margin="auto" width="10%" />
                         </Card.Description>
 
@@ -85,7 +86,7 @@ const CardProduct = ({ data, onHandleGetActive }) => {
                             {item.readMore ? 'Read more' : `$${item.price}`}
                         </Card.Meta>
                         {item.readMore && (
-                            <Card.Meta className={('number')}>{String(item.id).padStart(2, '0')}</Card.Meta>
+                            <Card.Meta className={('card-product-number')}>{String(item.id).padStart(2, '0')}</Card.Meta>
                         )}
                     </Card>
                 </Grid.Column>

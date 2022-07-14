@@ -11,4 +11,84 @@
             font-size: 4rem !important;
         }
     }
+
+    &-image {
+        padding: 30px 60px 0px !important;
+        background-color: transparent !important;
+    }
+
+    &-picture {
+        width: 40%;
+        margin: 100px auto 20px;
+    }
+}
+// Card product css
+.home-card {
+    margin-top: 4rem;
+}
+
+.card-product {
+    &:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+
+    &:hover {
+        .card-product-content {
+            visibility: inherit;
+        }
+    }
+
+    width: 100% !important;
+
+    &-container {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    &-date {
+        display: flex !important;
+        background-color: transparent !important;
+        padding: 20px 25px !important;
+        color: rgba(0, 0, 0, 0.3) !important;
+    }
+
+    &-like {
+        margin: 0 5px !important;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 10px !important;
+        visibility: hidden;
+
+        &-btn {
+            border-radius: 3px !important;
+            padding: 11px 5px !important;
+
+            i {
+                margin: 0 !important;
+            }
+        }
+    }
+
+    &-number {
+        font-size: 1.7rem !important;
+        padding: 30px 20px;
+        opacity: 0.7;
+    }
+}
+
+.price,
+.read-more {
+    color: red !important;
+    margin: 14px 0 100px;
+    font-weight: 600;
+}
+
+.read-more {
+    text-decoration: underline;
+    font-weight: 400;
+    margin: 14px 0 30px;
 }

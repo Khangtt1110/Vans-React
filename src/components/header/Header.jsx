@@ -17,18 +17,22 @@ const HeaderPage = ({ fixed = true }) => {
   const active = HeaderData.findIndex(e => e.path === pathname)
 
   useEffect(() => {
-    const shinkHeader = () => {
-      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-        headerRef.current.classList.add('fixed')
-      } else {
-        headerRef.current.classList.remove('fixed')
+    /**
+     * check home layout
+     */
+    if (!fixed) {
+      const shinkHeader = () => {
+        // scroll down and then fixed header
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          headerRef.current.classList.add('fixed')
+        } else {
+          headerRef.current.classList.remove('fixed')
+        }
       }
-    }
-
-    window.addEventListener('scroll', shinkHeader)
-    return () => {
-      window.removeEventListener('scroll', shinkHeader)
-
+      window.addEventListener('scroll', shinkHeader)
+      return () => {
+        window.removeEventListener('scroll', shinkHeader)
+      }
     }
   }, []);
   return (
