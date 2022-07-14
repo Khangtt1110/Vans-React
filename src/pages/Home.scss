@@ -1,0 +1,14 @@
+.home {
+    &-feature {
+        &-content {
+            margin-top: 4rem !important;
+        }
+
+        &-title {
+            letter-spacing: 0.3rem;
+            font-weight: 500 !important;
+            text-transform: uppercase !important;
+            font-size: 4rem !important;
+        }
+    }
+}

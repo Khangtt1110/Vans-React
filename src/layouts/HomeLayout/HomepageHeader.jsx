@@ -13,7 +13,7 @@ const HomepageHeader = () => {
             <HeaderPage fixed={false} />
             <Container>
                 <Grid>
-                    <Grid.Row>
+                    <Grid.Row className='header-list'>
                         <HeaderList />
                     </Grid.Row>
                     <Grid.Row className='header-info'>
