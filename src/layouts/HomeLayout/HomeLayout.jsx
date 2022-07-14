@@ -4,7 +4,7 @@ import HomepageHeader from './HomepageHeader'
 
 const HomeLayout = ({ children }) => {
     return (
-        <div>
+        <div className='homepage-layout'>
             <HomepageHeader />
             <div className="homepage-layout-container">
                 {children}

@@ -37,13 +37,14 @@
         max-height: 6rem;
 
         input {
-            color: white !important;
+            color: white !important ;
         }
         input::placeholder {
             font-family: var(--font-family);
         }
 
         & > div {
+            width: 100% !important;
             margin-left: 30px !important;
         }
     }
