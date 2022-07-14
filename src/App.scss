@@ -47,6 +47,7 @@ body {
     h3,
     h4 {
         font-family: $font-family !important;
+        text-transform: uppercase !important;
     }
 
     .ui.segment {
@@ -92,12 +93,15 @@ body {
             font-size: 1.2rem;
         }
     }
-
-    @media only screen and (max-width: 767px) {
-        .ui.container {
-            width: 90% !important;
-        }
+    .ui.grid > * {
+        padding: 0 !important;
+        border: none;
     }
+    // @media only screen and (max-width: 767px) {
+    //     .ui.container {
+    //         width: 90% !important;
+    //     }
+    // }
 
     .ui.card {
         -webkit-box-shadow: none;

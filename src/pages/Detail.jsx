@@ -11,8 +11,11 @@ import Slider from "react-slick";
 import { settings } from '~/common/setting/setting';
 
 import './Detail.scss'
+import { useDispatch } from 'react-redux';
+import { increment } from '~/services/counter';
 
 const Detail = () => {
+    const dispatch = useDispatch();
     const params = useParams();
     const [data, setData] = useState();
     /**
@@ -72,7 +75,7 @@ const Detail = () => {
                     </Grid.Row>
 
                     <Grid.Row className='detail-content'>
-                        <Button>ADD TO CARD</Button>
+                        <Button onClick={() => dispatch(increment({ id: data?.id }))}>ADD TO CARD</Button>
                         <Header as='h2'>Description</Header>
                         <HeaderContent className='detail-description'>
                             {data?.description}

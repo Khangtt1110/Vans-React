@@ -17,10 +17,18 @@ button {
     letter-spacing: 0.1rem;
 
     &-icon {
+        width: 1rem !important;
         &::before {
-            margin-right: -2rem;
+            margin-right: -1rem;
         }
     }
+
+    // @include tablet {
+    //     font-size: 1.2rem;
+    // }
+    // @include mobile {
+    //     font-size: 0.5rem;
+    // }
 }
 
 .btn:hover {

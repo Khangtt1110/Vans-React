@@ -96,7 +96,7 @@ export const bannerData = [
     {
         id: 1,
         title: "This <br /> Season's <br /> Must-haves",
-        button: 'show now',
+        button: 'SHOW NOW',
         image: images.clothes,
         content: 'Vans dipped palm <br /> island youth t-shirt',
         price: 19.99,
@@ -106,7 +106,7 @@ export const bannerData = [
     {
         id: 2,
         title: 'New <br /> Arrivals <br /> Pro Skate',
-        button: 'Discover More',
+        button: 'DISCOVER MORE',
         image: images.banner,
         width: 6,
         active: false,
@@ -144,7 +144,7 @@ export const customBannerData = [
     {
         id: 3,
         title: 'Uniform <br /> Friendly <br /> Shoes',
-        button: 'Discover More',
+        button: 'DISCOVER MORE',
         image: images.banner2,
         width: 6,
         active: false,

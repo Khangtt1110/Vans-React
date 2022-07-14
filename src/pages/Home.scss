@@ -1,4 +1,9 @@
+@use '../scss/' as *;
+
 .home {
+    .ui.segment {
+        padding: 0;
+    }
     &-feature {
         &-content {
             margin-top: 4rem !important;
@@ -7,7 +12,6 @@
         &-title {
             letter-spacing: 0.3rem;
             font-weight: 500 !important;
-            text-transform: uppercase !important;
             font-size: 4rem !important;
         }
     }
@@ -21,6 +25,19 @@
         width: 40%;
         margin: 100px auto 20px;
     }
+}
+
+.price,
+.read-more {
+    color: red !important;
+    margin: 14px 0 100px;
+    font-weight: 600;
+}
+
+.read-more {
+    text-decoration: underline;
+    font-weight: 400;
+    margin: 14px 0 30px;
 }
 // Card product css
 .home-card {
@@ -80,15 +97,45 @@
     }
 }
 
-.price,
-.read-more {
-    color: red !important;
-    margin: 14px 0 100px;
-    font-weight: 600;
-}
+//Banner style
+.homepage-banner {
+    &:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
 
-.read-more {
-    text-decoration: underline;
-    font-weight: 400;
-    margin: 14px 0 30px;
+    width: 100% !important;
+    height: 100%;
+
+    &-content {
+        display: flex !important;
+    }
+
+    &-number {
+        font-size: 6rem !important;
+        opacity: 0.1;
+        position: absolute;
+        top: 1em;
+        left: 0.3em;
+    }
+
+    &-description {
+        margin: 100px 0 0 50px !important;
+        color: $black !important;
+        line-height: 3.3rem;
+        letter-spacing: 0.2rem;
+        font-size: 3rem;
+        width: 60%;
+        font-weight: 600;
+    }
+
+    &-elements {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+
+        img {
+            width: 250px;
+        }
+    }
 }

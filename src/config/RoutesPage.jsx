@@ -9,6 +9,9 @@ const RoutesPage = [
   },
   {
     path: '/product/:productId', component: Detail, layout: DefaultLayout
+  },
+  {
+    path: '*', component: Home, layout: HomeLayout
   }
 ]
 
