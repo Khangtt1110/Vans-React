@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import { Container, Grid, Header, HeaderContent, Image, Rating, Segment } from 'semantic-ui-react';
-import { productsData } from '~/common/constants/Constants';
+import { allProduct } from '~/common/constants/Constants';
 
 import Breadcrumbs from '~/components/breadcrumbs/Breadcrumbs';
 import Button from '~/components/button/Button';
@@ -22,7 +22,7 @@ const Detail = () => {
      * Get data 
      */
     useEffect(() => {
-        setData(productsData?.find(({ id }) => String(id) === params.productId));
+        setData(allProduct.Shoes?.find(({ id }) => String(id) === params.productId));
     }, [params]);
 
     /**
@@ -36,14 +36,14 @@ const Detail = () => {
             path: '/',
         },
         {
-            key: 'Product',
-            content: 'Product',
+            key: 'Products',
+            content: 'Products',
             link: true,
-            path: '/product',
+            path: '/products',
         },
         {
             key: data?.id,
-            content: data?.title,
+            content: data?.name,
             active: true,
             path: '#'
         },
@@ -69,7 +69,7 @@ const Detail = () => {
                             ${data?.price}
                         </HeaderContent>
                         <Header as='h1' className="detail-title">
-                            <div dangerouslySetInnerHTML={{ __html: data?.title }}></div>
+                            <div dangerouslySetInnerHTML={{ __html: data?.name }}></div>
                         </Header>
                         <Rating maxRating={5} defaultRating={3} icon={'heart'} size='large' />
                     </Grid.Row>
@@ -88,7 +88,7 @@ const Detail = () => {
                 <Header as='h3'>MAY WE SUGGEST</Header>
                 <Slider
                     {...settings}>
-                    {productsData.map((item, i) => (
+                    {allProduct.Shoes.map((item, i) => (
                         <ProductList item={item} key={i} />
                     ))}
                 </Slider>
@@ -104,7 +104,7 @@ const ProductList = props => {
     const item = props.item
     return (
         <Segment >
-            <Link to={`/product/${item.id}`} replace={true}>
+            <Link to={`/products/${item.id}`} replace={true}>
                 <div className='product-list'>
                     <Image
                         // label={{
@@ -114,7 +114,7 @@ const ProductList = props => {
                         //     ribbon: 'right',
                         // }} 
                         src={item?.image} className='product-list-image' />
-                    <div dangerouslySetInnerHTML={{ __html: item?.title }} className='product-list-title'></div>
+                    <div dangerouslySetInnerHTML={{ __html: item?.name }} className='product-list-title'></div>
                 </div>
             </Link>
         </Segment>

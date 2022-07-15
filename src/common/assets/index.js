@@ -12,6 +12,17 @@ const images = {
     picture2: require('./Picture02.jpg'),
     picture3: require('./Picture03.jpg'),
     banner2: require('./Picture05.png'),
+    product01: require('./product01.jpg'),
+    product02: require('./product02.jpg'),
+    product03: require('./product03.jpg'),
+    product04: require('./product04.jpg'),
+    product05: require('./product05.jpg'),
+    product06: require('./product06.jpg'),
+    product07: require('./product07.jpg'),
+    product08: require('./product08.jpg'),
+    product09: require('./product09.jpg'),
+    product10: require('./product10.jpg'),
+    product11: require('./product11.jpg'),
 };
 
 export default images;

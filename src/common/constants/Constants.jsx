@@ -1,5 +1,139 @@
 import images from '~/common/assets';
 
+export const allProduct = {
+    Shoes: [
+        {
+            id: 1,
+            name: 'Air Jordan XXXVI Low',
+            type: 'Jordan ',
+            gender: 'Men',
+            image: images.product01,
+            price: '5.129.000',
+            description: 'From the perimeter to the hoop, take the court with confidence. This is one of the lightest Air Jordan game shoes to date, with a minimal but durable leno-weave upper reinforced with tough plastic details. Meanwhile, Zoom Air cushioning delivers energy return and elite responsiveness. The game asks for everything—now you have the shoe to match.',
+            amount: 0,
+
+        },
+        {
+            id: 2,
+            name: 'Jordan .5',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product02,
+            price: '3.829.000',
+            description: 'Russell Westbrook is fast. These shoes match his quickness with updated cushioning, data-informed traction and a full-foot fit system to keep him in control. With a rugged utility look combined with a purposeful clash of colours and materials, this model speaks to the core of Russel\'s "Why Not?" mantra.',
+            amount: 0,
+
+        },
+        {
+            id: 3,
+            name: 'Air Jordan 1 Zoom Cmft',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product03,
+            price: '4.109.000',
+            description: 'Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit.',
+            amount: 0,
+
+        },
+        {
+            id: 4,
+            name: 'Air Jordan 1 Retro High OG',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product04,
+            price: '4.999.000',
+            description: 'Familiar but always fresh, the iconic Air Jordan 1 is remastered for today\'s sneakerhead culture.This Retro High OG version goes all in with premium leather, comfortable cushioning and classic design details',
+            amount: 0,
+
+        },
+        {
+            id: 5,
+            name: 'Zion 1 SP',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product05,
+            price: '3.829.000',
+            description: 'Pairing a down-to-earth persona with out-of-this-world athleticism, Zion brings his best to the game—and he\'s got footwear to match. His shoes are light, stable and strong, with an extra-durable outsole designed to dominate on outdoor courts. Meanwhile, Air cushioning provides the plush underfoot comfort and rapid responsiveness you know and love.',
+            amount: 0,
+
+        },
+        {
+            id: 6,
+            name: 'Air Jordan 5 Retro Low SP',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product06,
+            price: '5.869.000',
+            description: 'Love the look of the AJ5 but prefer a lower-cut collar?The Air Jordan 5 Retro Low puts a fresh spin on the one-of-a-kind design with a satin touch to the upper.It\'s got Air in the heel and iconic elements including a lace toggle and grid- mesh panel.',
+            amount: 0,
+
+        },
+        {
+            id: 7,
+            name: 'Air Jordan 3 Retro',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product07,
+            price: '5.589.000',
+            description: 'The legendary shoe gets a new heritage-inspired look. A twist on the original \'Black Cement\' colourway, the Air Jordan 3 Retro brings in one of the brand\'s most iconic colours.',
+            amount: 0,
+
+        },
+        {
+            id: 8,
+            name: 'Sail and Burgundy',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product08,
+            price: '7.349.000',
+            description: 'Replacing the premium-leather upper and faux-lizard skins with a Sail all-over suede upper, A Ma Maniére is covering the AJ2 in vintage vibes with a modern luxury touch. And that lizard-skin print from the OG? It\'s textured onto the black midsole now.',
+            amount: 0,
+
+        },
+        {
+            id: 9,
+            name: 'Air Jordan 1 Mid SE',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product09,
+            price: '3.829.000',
+            description: 'Stand out with timeless hoops style. Premium leather gets polished, shined and textured to deliver a fresh take on the shoe that started it all. Air cushioning and a classic design keep everything you love best from the original.',
+            amount: 0,
+
+        },
+        {
+            id: 10,
+            name: 'Jordan Max Aura 3',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product10,
+            price: '3,519,000',
+            description: 'Get your piece of Jordan history and heritage in the Jordan Max Aura 3. Inspired by the brand\'s rich legacy of performance basketball, it has the energy of a game shoe and a design that puts a fresh spin on classic details.',
+            amount: 0,
+
+        },
+        {
+            id: 11,
+            name: 'Zion 2 PF',
+            type: 'Jordan',
+            gender: 'Men',
+            image: images.product11,
+            price: '4,109,000',
+            description: 'Channel new levels of speed and power in shoes designed for Zion and built for ballers at any level. An adjustable strap up top helps lock your foot in place while a firm midsole supports high-paced play. Plus, a wider outsole provides extra stability—perfect for playing on outdoor courts.',
+            amount: 0,
+
+        }
+    ],
+    Clothing: [
+
+    ],
+    Accessories: [
+
+    ]
+
+}
+
+
 export const HeaderData = [
     {
         name: 'Rest of Europe',
@@ -9,7 +143,7 @@ export const HeaderData = [
     {
         name: 'Store Locator',
         icon: 'map marker alternate',
-        path: '/storeLocator'
+        path: '/products'
     },
     {
         name: 'Help',

@@ -2,6 +2,7 @@
 
 .home {
     .ui.segment {
+        background-color: $body-bg;
         padding: 0;
     }
     &-feature {
@@ -22,6 +23,7 @@
 
         @include mobile {
             padding: 0px 60px 0px !important;
+            margin-top: -5rem;
         }
     }
 
@@ -67,6 +69,7 @@
     width: 100% !important;
 
     &-container {
+        background-color: #f6f6f6 !important;
         width: 100% !important;
         height: 100% !important;
     }
@@ -83,6 +86,7 @@
     }
 
     &-content {
+        z-index: 10;
         display: flex;
         justify-content: flex-end;
         align-items: center;

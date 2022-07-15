@@ -8,7 +8,7 @@ const Breadcrumbs = ({ data }) => {
             {data.map((item, index) => (
                 <>
                     < Breadcrumb.Section className={item.active && 'breadcrumbActive'} link >
-                        <Link to={`${item.path}`}><div dangerouslySetInnerHTML={{ __html: item?.content }}></div></Link>
+                        <Link to={`${item?.path}`}><div dangerouslySetInnerHTML={{ __html: item?.content }}></div></Link>
                     </Breadcrumb.Section >
                     {item.link && (<Breadcrumb.Divider icon={'right angle'} />)}
                 </>

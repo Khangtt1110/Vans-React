@@ -13,7 +13,8 @@ import './Home.scss'
 const Home = () => {
     const dispatch = useDispatch();
     const customCardData = useSelector((state) => state.like.customCardData);
-    const productsData = useSelector((state) => state.counter.productsData);
+    const allProduct = useSelector((state) => state.counter.allProduct.Shoes);
+    const tmp = allProduct.slice(0, 5)
 
     // function to check active and increase like
     const handleGetActive = (id, e) => {
@@ -32,7 +33,7 @@ const Home = () => {
                         <FeatureProduct />
                     </Grid.Row>
                     <Grid.Row className='home-card'>
-                        <CardProduct data={productsData} />
+                        <CardProduct data={tmp} />
                     </Grid.Row>
                     <Grid.Row>
                         <Banner data={bannerData} />
@@ -46,9 +47,10 @@ const Home = () => {
         </div>
     )
 }
-
-const FeatureProduct = () => {
-
+/**
+ * Feature Product
+ */
+export const FeatureProduct = () => {
     return (
         <Grid container centered className='home-feature-content'>
             <Grid.Row >
@@ -66,7 +68,7 @@ const FeatureProduct = () => {
 /**
  * List all Product
  */
-const CardProduct = ({ data, onHandleGetActive }) => {
+export const CardProduct = ({ data, onHandleGetActive }) => {
     const dispatch = useDispatch();
     useEffect(() => {
 
@@ -92,7 +94,7 @@ const CardProduct = ({ data, onHandleGetActive }) => {
                             </Card.Content>
                         ) : (
                             <Card.Content as="a" className={('card-product-content')}>
-                                <Link to={`/product/${item.id}`}>
+                                <Link to={`/products/${item.id}`}>
                                     <Icon name="eye" color="black" bordered />
                                 </Link>
                                 <Button
@@ -107,7 +109,7 @@ const CardProduct = ({ data, onHandleGetActive }) => {
 
                         <Image src={item.image} className={item.readMore ? ('home-picture') : ('home-image')} />
                         <Card.Description textAlign="center">
-                            <Card.Header as="h4" dangerouslySetInnerHTML={{ __html: item.title }} />
+                            <Card.Header as="h4" dangerouslySetInnerHTML={{ __html: item.name }} />
                             <Divider margin="auto" width="10%" />
                         </Card.Description>
 

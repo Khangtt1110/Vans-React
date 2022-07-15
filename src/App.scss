@@ -23,6 +23,8 @@ html {
 
 body {
     font-family: $font-family !important;
+    background-color: $body-bg !important;
+    background-color: #f6f6f6;
     text-transform: uppercase;
     font-weight: 400;
     line-height: 1.5;
@@ -58,6 +60,7 @@ body {
         box-shadow: none;
         -webkit-box-shadow: none;
         border: none;
+        background-color: $body-bg;
     }
     .ui.grid,
     p {
