@@ -10,21 +10,22 @@ const HomepageHeader = () => {
 
     return (
         < div className='header-homepage' >
-            <HeaderPage fixed={false} />
-            <Container>
-                <Grid>
-                    <Grid.Row className='header-list'>
-                        <HeaderList />
-                    </Grid.Row>
-                    <Grid.Row className='header-info'>
-                        <InfoData />
-                    </Grid.Row>
-                    <Grid.Row className='header-homepage-scroll' >
-                        <Icon inverted name='arrow alternate circle down outline' size='big' />
-                        <Header inverted as='h4'>SCROLL DOWN</Header>
-                    </Grid.Row>
-                </Grid>
-            </Container>
+            <HeaderPage fixed={false}>
+                <Container>
+                    <Grid>
+                        <Grid.Row className='header-list'>
+                            <HeaderList />
+                        </Grid.Row>
+                        <Grid.Row className='header-info'>
+                            <InfoData />
+                        </Grid.Row>
+                        <Grid.Row className='header-homepage-scroll' >
+                            <Icon inverted name='arrow alternate circle down outline' size='big' />
+                            <Header inverted as='h4'>SCROLL DOWN</Header>
+                        </Grid.Row>
+                    </Grid>
+                </Container>
+            </HeaderPage>
         </ div>
     )
 }

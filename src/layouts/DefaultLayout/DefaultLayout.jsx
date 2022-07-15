@@ -4,13 +4,14 @@ import HeaderPage from '~/components/header/Header'
 
 const DefaultLayout = ({ children }) => {
     return (
-        <div>
-            <HeaderPage />
-            <div className='layout-container'>
-                {children}
+        <HeaderPage fixed={true}>
+            <div>
+                <div className='layout-container'>
+                    {children}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </HeaderPage>
     )
 }
 

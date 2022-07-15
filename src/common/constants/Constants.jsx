@@ -24,7 +24,7 @@ export const HeaderData = [
     {
         name: 'Register',
         icon: 'add user',
-        path: '/'
+        path: '/register'
     },
 ];
 

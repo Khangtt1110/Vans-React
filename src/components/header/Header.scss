@@ -47,31 +47,27 @@
         top: 0.8rem !important;
         left: 5.8rem !important;
 
-        @include mobile {
-            top: 0.8rem !important;
-            left: 3.1rem !important;
-        }
-
         @include tablet {
             left: 4.1rem !important;
         }
+        @include mobile {
+            font-family: $font-family;
+            padding: 0.4rem 0.5rem !important;
+            top: 1rem !important;
+            left: 3.7rem !important;
+        }
+    }
+}
+.header-mobile {
+    padding: 0 !important;
+
+    &-icon {
+        margin: auto 0 !important;
     }
 }
 
-// @media screen and (min-width: 767px) and (max-width: 1024px) {
-//     .label-count {
-//         top: 10px !important;
-//         left: 37px !important;
-//     }
-// }
-
-// @media screen and (max-width: 767px) {
-//     .wrapper {
-//         height: 60px;
-//     }
-
-//     .label-count {
-//         top: 4px !important;
-//         left: 49px !important;
-//     }
-// }
+.header-mobile,
+.header-sidebar {
+    background-color: $black !important;
+    font-family: $font-family !important;
+}

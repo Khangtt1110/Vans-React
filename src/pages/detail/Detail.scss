@@ -1,7 +1,10 @@
-@use '../scss/' as *;
+@use '../../scss/' as *;
 
 .detail {
     margin-top: 8rem;
+    @include mobile {
+        margin-top: 4rem;
+    }
 
     br {
         display: none;
